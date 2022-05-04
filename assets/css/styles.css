@@ -27,12 +27,61 @@
 .regular-container{
     padding: 60px 20%;
 }
+/*Header*/
+header{
+    display: flex;
+    padding: 12px 10%;
+    align-items: center;
+    justify-content: space-between;
+}
+#menu-icon{
+    display: none;
+}
+header .logo{
+    width: 160px;
+}
+header .logo img{
+    width: 100%;
+}
+header nav{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+header nav ul{
+    padding: 0;
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+header nav ul a{
+    text-decoration: none;
+    color: #707070;
+}
+header nav ul li{
+    font-family: 'Questrial';
+    font-size: 14px;
+    color: #707070;
+    padding: 7px 20px;
+    transition: all ease-in-out .3s;
+}
+header nav ul li:hover,
+header nav ul li:focus{
+    color: black;
+}
+header nav ul li.active{
+    background: var(--main-pink);
+    color: white;
+}
+header nav i.search-ico{
+    color: var(--main-pink);
+}
 /*Footer*/
 footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 60px 20px;
+    padding: 50px 20px;
 }
 footer p.copyright{
     text-align: center;
@@ -44,6 +93,10 @@ footer p.copyright{
 footer p.copyright a{
     color: var(--main-pink);
     text-decoration: none;
+    transition: all ease-in-out .3s;
+}
+footer p.copyright a:hover{
+    text-decoration: underline;
 }
 footer .social{
     display: flex;
@@ -54,6 +107,50 @@ footer .social{
 footer .social i{
     color: var(--text-gray); 
     font-size: 13px;
+    transition: all ease-in-out .3s;
+}
+footer .social i:hover{
+    color: var(--main-pink);
+}
+/*Main banner*/
+#main-banner{
+    background-image: url('../img/banner-home.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#main-banner .contents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12% 0;
+    background: rgba(255,87,115,.5);
+    background: -prefix-linear-gradient(top, rgba(255,87,115,.8), rgba(0,0,0,.3));
+    background: linear-gradient(to bottom, rgba(255,87,115,.8), rgba(0,0,0,.3));
+}
+#main-banner .contents h3{
+    font-family: 'Montserrat Bold';
+    text-align: center;
+    color: white;
+    margin: 15px 0;
+    letter-spacing: 2px;
+    font-size: 25px;
+}
+#main-banner .contents small{
+    font-family: 'Questrial';
+    text-align: center;
+    color: white;
+    margin: 15px 0;
+}
+#main-banner .contents a{
+    display: flex;
+    padding: 10px 30px;
+    background: white;
+    text-align: center;
+    color: var(--main-pink);
+    font-family: 'Questrial';
+    text-decoration: none;
+    font-size: 13px;
+    margin: 15px 0;
 }
 /*Portfolio Grid*/
 #portfolio-grid .controls .typeof-grid{
@@ -82,6 +179,7 @@ footer .social i{
     cursor: pointer;
     transition: all ease-in-out .3s;
     text-transform: capitalize;
+    font-size: 14px;
 }
 #categories-control ul li:hover{
     background: #fafafa;

@@ -15,7 +15,28 @@
 
 /* xs */
 @media (max-width: 767px){
-
+    #menu-icon{
+        display: flex;
+    }
+    header nav{
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 280px;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: stretch;
+        background: white;
+        -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.2);
+        -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.2);
+        box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.2);
+        padding: 20px;
+        z-index: 1;
+    }
+    header nav ul{
+        flex-direction: column;        
+    }
 }
 
 /* XS Portrait */
