@@ -1,0 +1,47 @@
+/*Fonts*/
+@font-face{
+	font-family: 'Questrial';
+	src: url('../fonts/Questrial-Regular.ttf');
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 10px;
+}
+
+/*Portfolio Grid*/
+#portfolio-grid .controls .typeof-grid{
+    display: flex;
+    justify-content: center;
+}
+#categories-control ul{
+    padding: 0;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 10px;
+}
+#categories-control ul li{
+    font-family: 'Questrial';
+    color: black;
+    padding: 7px 12px;
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+}
+#categories-control ul li:hover{
+    background: #fafafa;
+}
+#categories-grids ul{
+    background: blue;
+    height: 30px;
+}
