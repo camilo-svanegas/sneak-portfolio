@@ -3,26 +3,70 @@
 	font-family: 'Questrial';
 	src: url('../fonts/Questrial-Regular.ttf');
 }
-
+@font-face{
+    font-family: 'Montserrat Bold';
+    src: url('../fonts/Montserrat-Bold.ttf');
+}
+/*Colors*/
+:root {
+    --main-pink: #ff5773;
+    --text-gray: #c3d0d8;
+  }
+/*Scroll bar styles (webkit browsers)*/
 ::-webkit-scrollbar {
     width: 10px;
 }
-
-/* Track */
 ::-webkit-scrollbar-track {
     border-radius: 10px;
 }
- 
-/* Handle */
 ::-webkit-scrollbar-thumb {
     background: #ddd;
     border-radius: 10px;
 }
-
+/*General*/
+.regular-container{
+    padding: 60px 20%;
+}
+/*Footer*/
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+}
+footer p.copyright{
+    text-align: center;
+    font-family: 'Questrial';
+    color: var(--text-gray);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+footer p.copyright a{
+    color: var(--main-pink);
+    text-decoration: none;
+}
+footer .social{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+footer .social i{
+    color: var(--text-gray); 
+    font-size: 13px;
+}
 /*Portfolio Grid*/
 #portfolio-grid .controls .typeof-grid{
     display: flex;
     justify-content: center;
+    gap: 15px;
+}
+#portfolio-grid .controls .typeof-grid i{
+    cursor: pointer;
+}
+#portfolio-grid .controls .typeof-grid i.type-active{
+    color: var(--main-pink);
+    cursor: initial;
 }
 #categories-control ul{
     padding: 0;
@@ -37,11 +81,25 @@
     padding: 7px 12px;
     cursor: pointer;
     transition: all ease-in-out .3s;
+    text-transform: capitalize;
 }
 #categories-control ul li:hover{
     background: #fafafa;
 }
-#categories-grids ul{
-    background: blue;
-    height: 30px;
+#works-grid ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    gap: 15px;
+}
+#works-grid ul li{
+    background: var(--main-pink);
+    padding: 80px 15px;
+    text-align: center;
+    font-family: 'Montserrat Bold';
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+   background-size: 100%;
 }

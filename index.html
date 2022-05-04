@@ -22,22 +22,31 @@
     <h1 style="font-family: 'Questrial';">SNEAK PORTFOLIO</h1>
     <img src="./assets/img/sneak-portfolio_logotipo.svg" style="width: 180px;" />
     <i class="fa-solid fa-magnifying-glass"></i>
-    <i class="fa-brands fa-facebook"></i>
-    <i class="fa-brands fa-twitter"></i>
-    <i class="fa-brands fa-dribbble"></i>
-    <i class="fa-brands fa-google-plus-g"></i>
-    <i class="fa-brands fa-youtube"></i>
     <hr>
     <!--Portfolio grid from JSON-->
     <section id="portfolio-grid">
-        <div class="controls">
-            <div class="typeof-grid">
-                type of grid
+        <div class="regular-container">
+            <div class="controls">
+                <div class="typeof-grid">
+                    <i class="type-active fa-solid fa-grip-vertical"></i>
+                    <i class="fa-solid fa-list"></i>
+                </div>
+                <div id="categories-control"><!--JSON list of categories--></div>
             </div>
-            <div id="categories-control"><!--JSON list of categories--></div>
+            <div id="works-grid"><!--JSON list of all works--></div>
         </div>
-        <div id="categories-grids"><!--JSON grids with contents per category--></div>
     </section>
+    <!--Footer-->
+    <footer>
+        <p class="copyright">© 2016 - <a href="#">Sneak</a> All Right Reserved</p>
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+            <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </footer>
 <!-- Scripts -->
 <script src="./assets/js/main.js"></script>
 </body>

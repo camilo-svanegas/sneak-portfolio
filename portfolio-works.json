@@ -1,49 +1,38 @@
 [
     {
-        "category": "branding",
-        "works": [
-            {
-                "title": "work one branding"
-            },
-            {
-                "title": "work two branding"
-            },
-            {
-                "title": "work three branding"
-            }
+        "title": "Financial Dashboard",
+        "image": "./assets/img/works/financial-app.jpg",
+        "categories": [
+            "web",
+            "app"
         ]
     },
     {
-        "category": "web",
-        "works": [
-            {
-                "title": "work one"
-            },
-            {
-                "title": "work two"
-            }
+        "title": "Local Bank re-branding",
+        "image": "./assets/img/works/local-bank-rebranding.jpg",
+        "categories": [
+            "branding"
         ]
     },
     {
-        "category": "photography",
-        "works": [
-            {
-                "title": "work one"
-            },
-            {
-                "title": "work two"
-            }
+        "title": "Delivery App design",
+        "image": "./assets/img/works/delivery-app-design.jpg",
+        "categories": [
+            "app"
         ]
     },
     {
-        "category": "app",
-        "works": [
-            {
-                "title": "work one"
-            },
-            {
-                "title": "work two"
-            }
+        "title": "Urban shoot",
+        "image": "./assets/img/works/urban-shoot.jpg",
+        "categories": [
+            "photography"
+        ]
+    },
+    {
+        "title": "Videogame logo",
+        "image": "./assets/img/works/video-game-logo.jpg",
+        "categories": [
+            "branding"
         ]
     }
 ]
