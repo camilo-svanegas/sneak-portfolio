@@ -34,16 +34,22 @@
 }
 .main-btn{
     background: var(--main-pink);
+    border: 1px solid var(--main-pink);
     font-family: 'Questrial';
     font-size: 14px;
     color: white;
     font-size: 14px;
     padding: 10px 30px;
-    border-style: none;
     text-decoration: none;
     cursor: pointer;
     transition: all ease-in-out .3s;
     display: flex;
+}
+.main-btn:hover,
+.main-btn:focus{
+    background: white;    
+    color: var(--main-pink);
+    border: 1px solid var(--main-pink);
 }
 .white-btn{
     background: white;
@@ -57,6 +63,11 @@
     transition: all ease-in-out .3s;
     display: flex;
 }
+.white-btn:hover,
+.white-btn:focus{
+    background: var(--main-pink);
+    color: white;
+}
 /*Header*/
 header{
     display: flex;
@@ -64,7 +75,10 @@ header{
     align-items: center;
     justify-content: space-between;
 }
-#menu-icon{
+#menu-icon,
+#mobile-fade,
+header nav .logo-mobile,
+#close-mobilenav{
     display: none;
 }
 header .logo{
@@ -93,11 +107,12 @@ header nav ul li{
     font-size: 14px;
     color: #707070;
     padding: 7px 20px;
-    transition: all ease-in-out .3s;
+    transition: all ease-in-out .4s;
 }
 header nav ul li:hover,
 header nav ul li:focus{
-    color: black;
+    background: var(--main-pink);
+    color: white;
 }
 header nav ul li.active{
     background: var(--main-pink);
@@ -147,6 +162,8 @@ footer .social i:hover{
     background-image: url('../img/banner-home.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 #main-banner .contents{
     display: flex;
@@ -213,12 +230,13 @@ footer .social i:hover{
     color: white;
 }
 #works-grid{
+    position: relative;
     height: auto;
     overflow: hidden;
-    max-height: 750px;
+    max-height: 1000px;
 }
 #works-grid.min-height{
-    height: 750px;
+    height: 1000px;
 }
 #works-grid ul{
     list-style: none;
@@ -252,7 +270,7 @@ footer .social i:hover{
     align-items: center;
     justify-content: center;
     background: rgba(255,87,115,.95);  
-    border: 8px solid rgba(0,0,0,.2);  
+    border: 8px solid rgba(255,87,115,99);    
     padding: 15px 20px;
     transition: all ease-in-out .6s;
     opacity: 0;
@@ -263,7 +281,7 @@ footer .social i:hover{
 }
 #works-grid ul li .lay h2{
     font-family: 'Montserrat Bold';
-    font-size: 15px;
+    font-size: 13px;
     color: white;
     border-bottom: 1px solid white;
     margin: 0;
@@ -273,4 +291,14 @@ footer .social i:hover{
     font-family: 'Questrial';
     color: white;
     margin: 15px 0;
+}
+#works-grid::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100px;
+    background: -prefix-linear-gradient(top, transparent, rgba(255,255,255,1));
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,1));
 }

@@ -74,5 +74,21 @@ function filterWorks(e, el){
     requestFilteredWorks.send();
 }
 //
+//Open Mobile side menu
+function openSideMenu(){
+    const sideMenu = document.getElementById('main-nav');
+    const mobileFade = document.getElementById('mobile-fade');
+    sideMenu.classList.add('active');
+    mobileFade.classList.add('active');
+}
+//
+//Close Mobile side menu
+function closeSideMenu(){
+    const sideMenu = document.getElementById('main-nav');
+    const mobileFade = document.getElementById('mobile-fade');
+    sideMenu.classList.remove('active');
+    mobileFade.classList.remove('active');
+
+}
 
 

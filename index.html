@@ -21,19 +21,24 @@
 <body>        
     <!--Header-->
     <header>
-        <i id="menu-icon" class="fa-solid fa-bars"></i>
+        <i onClick="openSideMenu()" id="menu-icon" class="fa-solid fa-bars"></i>
         <div class="logo">
             <img src="./assets/img/sneak-portfolio_logotipo.svg" />
         </div>
-        <nav>
+        <div id="mobile-fade" onClick="closeSideMenu()"></div>
+        <nav id="main-nav">
             <ul>
-                <a href="#"><li class="active">All</li></a>
-                <a href="#"><li>Branding</li></a>
-                <a href="#"><li>Web</li></a>
-                <a href="#"><li>Photography</li></a>
-                <a href="#"><li>App</li></a>
+                <a href="#" title="Link to All works page"><li>All</li></a>
+                <a href="#" title="Link to Branding works page"><li>Branding</li></a>
+                <a href="#" title="Link to Web works page"><li>Web</li></a>
+                <a href="#" title="Link to Photography works page"><li>Photography</li></a>
+                <a href="#" title="Link to App works page"><li>App</li></a>
             </ul>
             <i class="search-ico fa-solid fa-magnifying-glass"></i>
+            <div class="logo-mobile">
+                <img src="./assets/img/sneak-portfolio_logotipo.svg" />
+            </div>
+            <div id="close-mobilenav" onClick="closeSideMenu()"><i class="fa-solid fa-xmark"></i></div>
         </nav>
     </header>
     <!--Banner-->
@@ -41,7 +46,7 @@
         <div class="contents">
             <h3>EXPLORE BEYOND HORIZON</h3>
             <small>Magna mundi referrentur quo, no rebum dignissim qui. <br>Per quodsi accusata id, agam labores.</small>
-            <a  class="white-btn" href="#">VIEW OUR WORK</a>
+            <a  class="white-btn" href="#" title="Link to All works page">VIEW OUR WORK</a>
         </div>
     </section>
     <!--Portfolio grid from JSON-->
@@ -62,13 +67,13 @@
     </section>
     <!--Footer-->
     <footer>
-        <p class="copyright">© 2016 - <a href="#">Sneak</a> All Right Reserved</p>
+        <p class="copyright">© 2016 - <a href="#" target="_blank" title="Link to Sneak Official Page">Sneak</a> All Right Reserved.</p>
         <div class="social">
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-dribbble"></i></a>
-            <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" title="Link to Facebook page"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" title="Link to Twitter page"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" title="Link to Dribble page"><i class="fa-brands fa-dribbble"></i></a>
+            <a href="#" title="Link to Google Plus page"><i class="fa-brands fa-google-plus-g"></i></a>
+            <a href="#" title="Link to Youtube page"><i class="fa-brands fa-youtube"></i></a>
         </div>
     </footer>
 <!-- Scripts -->

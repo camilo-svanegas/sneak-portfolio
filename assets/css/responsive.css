@@ -5,25 +5,76 @@
 
 /* md */
 @media (min-width: 992px) and (max-width: 1199px){
-
+    header{
+        padding: 12px 5%;
+    }
+    header nav ul{
+        gap: 20px;
+    }
+    .regular-container {
+        padding: 0 15%;
+    }
+    #works-grid{
+        max-height: 700px;
+    }
+    #works-grid.min-height{
+        height: 700px
+    }
 }
 
 /* sm */
 @media (min-width: 768px) and (max-width: 991px){
-
-}
-
-/* xs */
-@media (max-width: 767px){
+    .regular-container{
+        padding: 0 10%;
+    }
     #menu-icon{
         display: flex;
+        font-size: 30px;
+    }
+    @keyframes fadeEffect {
+        from {opacity: 0}
+        to{opacity: 1}
+    }
+    #mobile-fade{
+        display: none;
+        position: fixed;
+        left: 0; 
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255,87,115,.5);
+        z-index: 1;
+        transition: all ease-in-out .3s;
+    }
+    #mobile-fade.active{
+        display: block;
+        animation-name: fadeEffect;
+        animation-duration: 1.5s;
+    }
+    #close-mobilenav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        top: 10px;
+        width: 40px;
+        height: 40px;
+        background: var(--main-pink);
+    }
+    #close-mobilenav i{
+        color: white;
+    }
+    header{
+        flex-direction: row-reverse;
+        padding: 12px 20px 12px 10px;
     }
     header nav{
         position: fixed;
-        left: 0;
+        left: -100%;
         top: 0;
         bottom: 0;
-        width: 280px;
+        width: 220px;
         flex-direction: column-reverse;
         justify-content: flex-end;
         align-items: stretch;
@@ -31,14 +82,137 @@
         -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.2);
         -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.2);
         box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.2);
-        padding: 20px;
-        z-index: 1;
+        padding: 40px;
+        z-index: 2;
+        transition: all ease-in-out .4s;
+        overflow: scroll;
     }
     header nav ul{
-        flex-direction: column;        
+        flex-direction: column;    
+        overflow: scroll;    
+    }
+    header nav ul li{
+        padding-left: 0;
+    }
+    header nav.active{
+        left: 0;
+    }
+    header nav .logo-mobile{
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+    }
+    header nav .logo-mobile img{
+        width: 200px;
+    }
+    #portfolio-grid .controls .typeof-grid{
+        display: none;
+    }
+    #categories-control ul{
+        margin-top: 35px;
+    }
+}
+
+/* xs */
+@media (max-width: 767px){
+    .regular-container{
+        padding: 0 20px;
+    }
+    #menu-icon{
+        display: flex;
+        font-size: 30px;
+    }
+    @keyframes fadeEffect {
+        from {opacity: 0}
+        to{opacity: 1}
+    }
+    #mobile-fade{
+        display: none;
+        position: fixed;
+        left: 0; 
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255,87,115,.5);
+        z-index: 1;
+        transition: all ease-in-out .3s;
+    }
+    #mobile-fade.active{
+        display: block;
+        animation-name: fadeEffect;
+        animation-duration: 1.5s;
+    }
+    #close-mobilenav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        top: 10px;
+        width: 40px;
+        height: 40px;
+        background: var(--main-pink);
+    }
+    #close-mobilenav i{
+        color: white;
+    }
+    header{
+        flex-direction: row-reverse;
+        padding: 12px 20px 12px 10px;
+    }
+    header nav{
+        position: fixed;
+        left: -100%;
+        top: 0;
+        bottom: 0;
+        width: 220px;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: stretch;
+        background: white;
+        -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.2);
+        -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.2);
+        box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.2);
+        padding: 40px;
+        z-index: 2;
+        transition: all ease-in-out .4s;
+        overflow: scroll;
+    }
+    header nav ul{
+        flex-direction: column;    
+        overflow: scroll;    
+    }
+    header nav ul li{
+        padding-left: 0;
+    }
+    header nav.active{
+        left: 0;
+    }
+    header nav .logo-mobile{
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+    }
+    header nav .logo-mobile img{
+        width: 200px;
+    }
+    #portfolio-grid .controls .typeof-grid{
+        display: none;
+    }
+    #categories-control ul{
+        margin-top: 35px;
     }
 }
 
 /* XS Portrait */
 @media (max-width: 480px){
+    #categories-control{
+        overflow-x: scroll;
+        padding-left: 40px;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    #categories-control::-webkit-scrollbar{
+        display: none;
+    }
 }

@@ -41,6 +41,14 @@
         ]
     },
     {
+        "title": "Hospital Software",
+        "image": "./assets/img/works/hospital-software.jpg",
+        "categories": [
+            "web",
+            "all"
+        ]
+    },
+    {
         "title": "Model Photo Session",
         "image": "./assets/img/works/model-photo-session.jpg",
         "categories": [
@@ -48,6 +56,14 @@
             "all"
         ]
 
+    },
+    {
+        "title": "Restaurant App",
+        "image": "./assets/img/works/restaurant-app.jpg",
+        "categories": [
+            "app",
+            "all"
+        ]
     },
     {
         "title": "Global Bank re-branding",
@@ -62,6 +78,14 @@
         "image": "./assets/img/works/photographers-web-app.jpg",
         "categories": [
             "photography",
+            "app",
+            "all"
+        ]
+    },
+    {
+        "title": "Reports App",
+        "image": "./assets/img/works/reports-app.jpg",
+        "categories": [
             "app",
             "all"
         ]
