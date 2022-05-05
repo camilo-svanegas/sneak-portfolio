@@ -23,6 +23,9 @@
     background: #ddd;
     border-radius: 10px;
 }
+body{
+    scroll-behavior: smooth;
+}
 /*General*/
 .regular-container{
     padding: 0 20%;
