@@ -50,6 +50,7 @@ function filterWorks(e, el){
         worksContainer.classList.add('min-height');
         worksContainer.classList.remove('full-height');
     } else{
+        const buttonMore = document.getElementById('more-works');
         worksContainer.classList.remove('min-height');
         buttonMore.style.display = "none";
     }
