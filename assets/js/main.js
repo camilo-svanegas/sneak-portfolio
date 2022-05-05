@@ -6,7 +6,7 @@ requestWorks.onreadystatechange = function() {
         //Create  list of all works
         var allWorks = '<ul>';
         parsedWorks.forEach(work => {
-            allWorks += '<li style="background-image: url('+work.image+');">'+work.title+'</li>';
+            allWorks += '<li><img src="'+work.image+'" /></li>';
         });
         allWorks += '</ul>';
         document.getElementById('works-grid').innerHTML = allWorks;

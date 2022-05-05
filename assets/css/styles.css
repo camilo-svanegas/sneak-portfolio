@@ -185,19 +185,23 @@ footer .social i:hover{
     background: #fafafa;
 }
 #works-grid ul{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     list-style: none;
-    gap: 15px;
+    columns: 5 200px;
+    column-gap: 10px;
 }
 #works-grid ul li{
+    display: contents;
     background: var(--main-pink);
-    padding: 80px 15px;
+    padding: 0;
+    margin-bottom: 10px;
     text-align: center;
     font-family: 'Montserrat Bold';
     color: white;
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 2px;
-   background-size: 100%;
+}
+#works-grid ul li img{
+    width: 100%;
+    margin-bottom: 5px;
 }
