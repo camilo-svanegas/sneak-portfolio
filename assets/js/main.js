@@ -23,11 +23,14 @@ requestCategories.onreadystatechange = function() {
         //List of categories (tab control)        
         var item = '<ul>';
         parsedCategories.forEach(category => {
-            item += '<li '+'id="'+category.title+'" onClick="filterWorks(event, this)" class="portfolio-tab">'+category.title+'</li>';
+            item += '<li '+'id="'+category.title+'" onClick="filterWorks(event, this)" class="portfolio-tab '+category.title+'">'+category.title+'</li>';
         });
         item += '</ul>'; 
         document.getElementById('categories-control').innerHTML = item;
-        document.getElementById('all').classList.add('active');
+        const initialButtons = document.querySelectorAll('.all');
+        initialButtons.forEach(button => {
+            button.classList.add('active');
+        });
     }
 };
 requestCategories.open("GET", "portfolio-categories.json", true);
@@ -38,13 +41,21 @@ function filterWorks(e, el){
     e = e || window.event;
     const pickedCategory = el.id;
     const clickedCategory = el;
+    const sideMenu = document.getElementById('main-nav');
+    const mobileFade = document.getElementById('mobile-fade');
+    sideMenu.classList.remove('active');
+    mobileFade.classList.remove('active');
     const alltabs = document.querySelectorAll('.portfolio-tab');
     alltabs.forEach(tab => {
         tab.classList.remove('active');
     });
+    const allMenus = document.querySelectorAll('.menu-control');
+    allMenus.forEach(menu => {
+        menu.classList.remove('active');
+    });
     clickedCategory.classList.add('active');
     const worksContainer = document.getElementById('works-grid');
-    if(pickedCategory === 'all'){
+    if(pickedCategory.includes('all')){
         const buttonMore = document.getElementById('more-works');
         buttonMore.style.display = "flex";
         worksContainer.classList.add('min-height');
@@ -54,6 +65,10 @@ function filterWorks(e, el){
         worksContainer.classList.remove('min-height');
         buttonMore.style.display = "none";
     }
+    const activeButton = document.querySelectorAll('.'+pickedCategory);
+    activeButton.forEach(button => {
+        button.classList.add('active');
+    });
     var requestFilteredWorks = new XMLHttpRequest();
     requestFilteredWorks.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
@@ -64,7 +79,7 @@ function filterWorks(e, el){
             //Create list of filtered works
             var worksByFilter = '<ul>';
             filteredWorks.forEach(work => {
-                if(pickedCategory === 'all'){
+                if(pickedCategory.includes('all')){
                     worksByFilter += '<li><div class="lay"><h2>'+work.title+'</h2><p>'+work.categories[0]+'</p></div><img src="'+work.image+'" /></li>';
                 }else{
                     worksByFilter += '<li><div class="lay"><h2>'+work.title+'</h2></div><img src="'+work.image+'" /></li>';

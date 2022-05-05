@@ -120,6 +120,9 @@
         background: var(--main-pink);
         color: #707070;
     }
+    header nav ul a.active li{
+        padding-left: 10px;
+    }
 }
 
 /* xs */

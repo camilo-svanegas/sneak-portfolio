@@ -117,8 +117,11 @@ header nav ul li:focus{
     background: var(--main-pink);
     color: white;
 }
-header nav ul li.active{
+header nav ul a.active{
     background: var(--main-pink);
+    color: white;
+}
+header nav ul a.active li{
     color: white;
 }
 header nav i.search-ico{
