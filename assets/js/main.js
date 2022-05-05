@@ -6,7 +6,7 @@ requestWorks.onreadystatechange = function() {
         //Create  list of all works
         var allWorks = '<ul>';
         parsedWorks.forEach(work => {
-            allWorks += '<li><img src="'+work.image+'" /></li>';
+            allWorks += '<li><div class="lay"><h2>'+work.title+'</h2><p>'+work.categories[0]+'</p></div><img src="'+work.image+'" /></li>';
         });
         allWorks += '</ul>';
         document.getElementById('works-grid').innerHTML = allWorks;
@@ -14,6 +14,7 @@ requestWorks.onreadystatechange = function() {
 };
 requestWorks.open("GET", "portfolio-works.json", true);
 requestWorks.send();
+//
 //Get JSON of portfolio categories (async)
 var requestCategories = new XMLHttpRequest();
 requestCategories.onreadystatechange = function() {
@@ -31,6 +32,7 @@ requestCategories.onreadystatechange = function() {
 };
 requestCategories.open("GET", "portfolio-categories.json", true);
 requestCategories.send();
+//
 //Filter per categories (async)
 function filterWorks(e, el){
     e = e || window.event;
@@ -41,6 +43,12 @@ function filterWorks(e, el){
         tab.classList.remove('active');
     });
     clickedCategory.classList.add('active');
+    const worksContainer = document.getElementById('works-grid');
+    if(pickedCategory === 'all'){
+        worksContainer.classList.add('min-height');
+    } else{
+        worksContainer.classList.remove('min-height');
+    }
     var requestFilteredWorks = new XMLHttpRequest();
     requestFilteredWorks.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
@@ -48,10 +56,15 @@ function filterWorks(e, el){
             let filteredWorks = parsedWorks.filter(function(work){
                 return work.categories.includes(pickedCategory);
             });
-            //Create  list of filtered works
+            //Create list of filtered works
             var worksByFilter = '<ul>';
             filteredWorks.forEach(work => {
-                worksByFilter += '<li><img src="'+work.image+'" /></li>';
+                if(pickedCategory === 'all'){
+                    worksByFilter += '<li><div class="lay"><h2>'+work.title+'</h2><p>'+work.categories[0]+'</p></div><img src="'+work.image+'" /></li>';
+                }else{
+                    worksByFilter += '<li><div class="lay"><h2>'+work.title+'</h2></div><img src="'+work.image+'" /></li>';
+                }
+                
             });
             worksByFilter += '</ul>';
             document.getElementById('works-grid').innerHTML = worksByFilter;
@@ -60,5 +73,6 @@ function filterWorks(e, el){
     requestFilteredWorks.open("GET", "portfolio-works.json", true);
     requestFilteredWorks.send();
 }
+//
 
 

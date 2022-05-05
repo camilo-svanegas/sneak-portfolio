@@ -25,7 +25,37 @@
 }
 /*General*/
 .regular-container{
-    padding: 60px 20%;
+    padding: 0 20%;
+}
+.center-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.main-btn{
+    background: var(--main-pink);
+    font-family: 'Questrial';
+    font-size: 14px;
+    color: white;
+    font-size: 14px;
+    padding: 10px 30px;
+    border-style: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+    display: flex;
+}
+.white-btn{
+    background: white;
+    font-family: 'Questrial';
+    font-size: 14px;
+    color: var(--main-pink);
+    padding: 10px 30px;
+    border-style: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+    display: flex;
 }
 /*Header*/
 header{
@@ -142,14 +172,6 @@ footer .social i:hover{
     margin: 15px 0;
 }
 #main-banner .contents a{
-    display: flex;
-    padding: 10px 30px;
-    background: white;
-    text-align: center;
-    color: var(--main-pink);
-    font-family: 'Questrial';
-    text-decoration: none;
-    font-size: 13px;
     margin: 15px 0;
 }
 /*Portfolio Grid*/
@@ -157,6 +179,7 @@ footer .social i:hover{
     display: flex;
     justify-content: center;
     gap: 15px;
+    margin-top: 60px;
 }
 #portfolio-grid .controls .typeof-grid i{
     cursor: pointer;
@@ -190,18 +213,20 @@ footer .social i:hover{
     color: white;
 }
 #works-grid{
-    height: 800px;
+    height: auto;
     overflow: hidden;
+    max-height: 750px;
+}
+#works-grid.min-height{
+    height: 750px;
 }
 #works-grid ul{
     list-style: none;
     padding: 0;
-    columns: 5 200px;
+    columns: 3 200px;
     column-gap: 10px;
 }
 #works-grid ul li{
-    display: contents;
-    background: var(--main-pink);
     padding: 0;
     margin-bottom: 10px;
     text-align: center;
@@ -210,8 +235,42 @@ footer .social i:hover{
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
 }
 #works-grid ul li img{
     width: 100%;
-    margin-bottom: 5px;
+}
+#works-grid ul li .lay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,87,115,.95);  
+    border: 8px solid rgba(0,0,0,.2);  
+    padding: 15px 20px;
+    transition: all ease-in-out .6s;
+    opacity: 0;
+    cursor: pointer;
+}
+#works-grid ul li:hover .lay{
+    opacity: 1;
+}
+#works-grid ul li .lay h2{
+    font-family: 'Montserrat Bold';
+    font-size: 15px;
+    color: white;
+    border-bottom: 1px solid white;
+    margin: 0;
+    padding-bottom: 5px;
+}
+#works-grid ul li .lay p{
+    font-family: 'Questrial';
+    color: white;
+    margin: 15px 0;
 }
