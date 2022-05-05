@@ -200,6 +200,9 @@
     header nav.active{
         left: 0;
     }
+    header nav ul a.active li{
+        padding-left: 10px;
+    }
     header nav .logo-mobile{
         display: flex;
         justify-content: center;
