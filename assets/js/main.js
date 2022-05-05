@@ -22,13 +22,43 @@ requestCategories.onreadystatechange = function() {
         //List of categories (tab control)        
         var item = '<ul>';
         parsedCategories.forEach(category => {
-            item += '<li '+'id="'+category.title+'">'+category.title+'</li>';
+            item += '<li '+'id="'+category.title+'" onClick="filterWorks(event, this)" class="portfolio-tab">'+category.title+'</li>';
         });
         item += '</ul>'; 
         document.getElementById('categories-control').innerHTML = item;
+        document.getElementById('all').classList.add('active');
     }
 };
 requestCategories.open("GET", "portfolio-categories.json", true);
 requestCategories.send();
-//
+//Filter per categories (async)
+function filterWorks(e, el){
+    e = e || window.event;
+    const pickedCategory = el.id;
+    const clickedCategory = el;
+    const alltabs = document.querySelectorAll('.portfolio-tab');
+    alltabs.forEach(tab => {
+        tab.classList.remove('active');
+    });
+    clickedCategory.classList.add('active');
+    var requestFilteredWorks = new XMLHttpRequest();
+    requestFilteredWorks.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+            let parsedWorks = JSON.parse(requestFilteredWorks.responseText);
+            let filteredWorks = parsedWorks.filter(function(work){
+                return work.categories.includes(pickedCategory);
+            });
+            //Create  list of filtered works
+            var worksByFilter = '<ul>';
+            filteredWorks.forEach(work => {
+                worksByFilter += '<li><img src="'+work.image+'" /></li>';
+            });
+            worksByFilter += '</ul>';
+            document.getElementById('works-grid').innerHTML = worksByFilter;
+        }
+    };
+    requestFilteredWorks.open("GET", "portfolio-works.json", true);
+    requestFilteredWorks.send();
+}
+
 

@@ -184,8 +184,18 @@ footer .social i:hover{
 #categories-control ul li:hover{
     background: #fafafa;
 }
+#categories-control ul li.active,
+#categories-control ul li.active:hover{
+    background: var(--main-pink);
+    color: white;
+}
+#works-grid{
+    height: 800px;
+    overflow: hidden;
+}
 #works-grid ul{
     list-style: none;
+    padding: 0;
     columns: 5 200px;
     column-gap: 10px;
 }

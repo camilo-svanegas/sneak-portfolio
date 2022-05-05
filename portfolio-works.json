@@ -4,35 +4,66 @@
         "image": "./assets/img/works/financial-app.jpg",
         "categories": [
             "web",
-            "app"
+            "app",
+            "all"
         ]
     },
     {
         "title": "Local Bank re-branding",
         "image": "./assets/img/works/local-bank-rebranding.jpg",
         "categories": [
-            "branding"
+            "branding",
+            "all"
         ]
     },
     {
         "title": "Delivery App design",
         "image": "./assets/img/works/delivery-app-design.jpg",
         "categories": [
-            "app"
+            "app",
+            "all"
         ]
     },
     {
         "title": "Urban shoot",
         "image": "./assets/img/works/urban-shoot.jpg",
         "categories": [
-            "photography"
+            "photography",
+            "all"
         ]
     },
     {
         "title": "Videogame logo",
         "image": "./assets/img/works/video-game-logo.jpg",
         "categories": [
-            "branding"
+            "branding",
+            "all"
+        ]
+    },
+    {
+        "title": "Model Photo Session",
+        "image": "./assets/img/works/model-photo-session.jpg",
+        "categories": [
+            "photography",
+            "all"
+        ]
+
+    },
+    {
+        "title": "Global Bank re-branding",
+        "image": "./assets/img/works/global-bank-rebranding.jpg",
+        "categories": [
+            "branding",
+            "all"
+        ]
+    },
+    {
+        "title": "Photographers Web App",
+        "image": "./assets/img/works/photographers-web-app.jpg",
+        "categories": [
+            "photography",
+            "app",
+            "all"
         ]
     }
 ]
