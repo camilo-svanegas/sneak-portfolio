@@ -51,6 +51,7 @@ function filterWorks(e, el){
         worksContainer.classList.remove('full-height');
     } else{
         worksContainer.classList.remove('min-height');
+        buttonMore.style.display = "none";
     }
     var requestFilteredWorks = new XMLHttpRequest();
     requestFilteredWorks.onreadystatechange = function(){
