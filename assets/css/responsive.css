@@ -111,6 +111,15 @@
     #categories-control ul{
         margin-top: 35px;
     }
+    header nav ul li:hover,
+    header nav ul li:focus{
+        background: transparent;
+        color: #707070;
+    }
+    header nav ul li.active{
+        background: var(--main-pink);
+        color: #707070;
+    }
 }
 
 /* xs */

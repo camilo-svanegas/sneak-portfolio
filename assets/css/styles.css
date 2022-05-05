@@ -238,6 +238,10 @@ footer .social i:hover{
 #works-grid.min-height{
     height: 1000px;
 }
+#works-grid.full-height{
+    height: auto;
+    max-height: initial;
+}
 #works-grid ul{
     list-style: none;
     padding: 0;

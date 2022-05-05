@@ -45,7 +45,10 @@ function filterWorks(e, el){
     clickedCategory.classList.add('active');
     const worksContainer = document.getElementById('works-grid');
     if(pickedCategory === 'all'){
+        const buttonMore = document.getElementById('more-works');
+        buttonMore.style.display = "flex";
         worksContainer.classList.add('min-height');
+        worksContainer.classList.remove('full-height');
     } else{
         worksContainer.classList.remove('min-height');
     }
@@ -74,6 +77,14 @@ function filterWorks(e, el){
     requestFilteredWorks.send();
 }
 //
+//Ful height portfolio
+function fullHeightPortfolio(){
+    const grid = document.getElementById('works-grid');
+    const buttonMore = document.getElementById('more-works');
+    grid.classList.add('full-height');    
+    buttonMore.style.display = "none";
+}
+//
 //Open Mobile side menu
 function openSideMenu(){
     const sideMenu = document.getElementById('main-nav');
@@ -88,7 +99,7 @@ function closeSideMenu(){
     const mobileFade = document.getElementById('mobile-fade');
     sideMenu.classList.remove('active');
     mobileFade.classList.remove('active');
-
 }
+//
 
 

@@ -28,13 +28,13 @@
         <div id="mobile-fade" onClick="closeSideMenu()"></div>
         <nav id="main-nav">
             <ul>
-                <a href="#" title="Link to All works page"><li>All</li></a>
-                <a href="#" title="Link to Branding works page"><li>Branding</li></a>
-                <a href="#" title="Link to Web works page"><li>Web</li></a>
-                <a href="#" title="Link to Photography works page"><li>Photography</li></a>
-                <a href="#" title="Link to App works page"><li>App</li></a>
+                <a href="#" onClick="closeSideMenu()" title="Link to All works page"><li>All</li></a>
+                <a href="#" onClick="closeSideMenu()" title="Link to Branding works page"><li>Branding</li></a>
+                <a href="#" onClick="closeSideMenu()" title="Link to Web works page"><li>Web</li></a>
+                <a href="#" onClick="closeSideMenu()" title="Link to Photography works page"><li>Photography</li></a>
+                <a href="#" onClick="closeSideMenu()" title="Link to App works page"><li>App</li></a>
             </ul>
-            <i class="search-ico fa-solid fa-magnifying-glass"></i>
+            <i class="search-ico fa-solid fa-magnifying-glass" onClick="closeSideMenu()"></i>
             <div class="logo-mobile">
                 <img src="./assets/img/sneak-portfolio_logotipo.svg" />
             </div>
@@ -60,8 +60,8 @@
                 <div id="categories-control"><!--JSON list of categories--></div>
             </div>
             <div id="works-grid"><!--JSON list of all works--></div>
-            <div class="center-btn">
-                <button class="main-btn" type="button">Show Me More</button>
+            <div id="more-works" class="center-btn">
+                <button onClick="fullHeightPortfolio()" class="main-btn" type="button">Show Me More</button>
             </div>
         </div>
     </section>
